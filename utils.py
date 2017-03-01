@@ -9,7 +9,6 @@ def samplePatches(input_im, input_shape, patch_num):
     sample patches from input images
     input_shape should be a square number
     """
-
     num_imgs = input_im.shape[0]
     width = input_im.shape[1]
     height = input_im.shape[2]
