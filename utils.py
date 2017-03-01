@@ -1,8 +1,7 @@
 import numpy as np
 import random
 import math
-import scipy
-from scipy import signal
+from scipy.signal import fftconvolve
 
 def samplePatches(input_im, input_shape, patch_num):
     """
@@ -45,6 +44,8 @@ def createFM(imgs, weights, bias, TYPE):
     
     feature_maps = np.zeros((num_imgs,num_filt)).astype('float32')
     for k in range(num_imgs):
+      if k%100 == 0:
+          print str(k)+" images processed..."
       img = imgs[k,:].reshape(im_side,im_side)
       for i in range(num_filt):
         filt = weights[:,i].reshape((weight_len,weight_len))

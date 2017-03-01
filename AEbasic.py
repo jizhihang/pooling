@@ -3,7 +3,6 @@ from keras.models import Model, Sequential
 from keras.datasets import mnist
 import numpy as np
 from keras import regularizers
-from keras.utils.np_utils import to_categorical
 from utils import *
 import sys
 sys.path.append('./libsvm-3.22/python')
